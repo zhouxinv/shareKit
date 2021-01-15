@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface VVshareSDK : NSObject
 
 - (void)sayHello;
+
+- (void)sayMyLove;
+
 @end
 
 NS_ASSUME_NONNULL_END

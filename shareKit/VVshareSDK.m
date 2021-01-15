@@ -13,4 +13,8 @@
     NSLog(@"say hello!");
 }
 
+- (void)sayMyLove {
+    NSLog(@"say my love is LiXiaolong🐉!");
+}
+
 @end
