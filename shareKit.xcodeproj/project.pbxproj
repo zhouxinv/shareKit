@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06C61FF3EB72A695CB005372 /* Pods_AllFrameWorks_shareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D02ED453F413367610A278 /* Pods_AllFrameWorks_shareKit.framework */; };
 		5CE7094725B173540094F440 /* shareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE7093D25B173540094F440 /* shareKit.framework */; };
 		5CE7094C25B173540094F440 /* shareKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7094B25B173540094F440 /* shareKitTests.m */; };
 		5CE7094E25B173540094F440 /* shareKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CE7094025B173540094F440 /* shareKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08F0A8345AB4341F497E301F /* Pods-AllFrameWorks-shareKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllFrameWorks-shareKit.release.xcconfig"; path = "Target Support Files/Pods-AllFrameWorks-shareKit/Pods-AllFrameWorks-shareKit.release.xcconfig"; sourceTree = "<group>"; };
+		09D02ED453F413367610A278 /* Pods_AllFrameWorks_shareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllFrameWorks_shareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		110CE98510C11C2B5370BD4A /* Pods-AllFrameWorks-shareKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllFrameWorks-shareKit.debug.xcconfig"; path = "Target Support Files/Pods-AllFrameWorks-shareKit/Pods-AllFrameWorks-shareKit.debug.xcconfig"; sourceTree = "<group>"; };
 		5CE7093D25B173540094F440 /* shareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = shareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE7094025B173540094F440 /* shareKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shareKit.h; sourceTree = "<group>"; };
 		5CE7094125B173540094F440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C61FF3EB72A695CB005372 /* Pods_AllFrameWorks_shareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C924FDF25B97C1400F69E0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09D02ED453F413367610A278 /* Pods_AllFrameWorks_shareKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5CE7093325B173540094F440 = {
 			isa = PBXGroup;
 			children = (
 				5CE7093F25B173540094F440 /* shareKit */,
 				5CE7094A25B173540094F440 /* shareKitTests */,
 				5CE7093E25B173540094F440 /* Products */,
+				5C924FDF25B97C1400F69E0E /* Frameworks */,
+				70EC3F6C9266C38126481273 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +107,16 @@
 			path = shareKitTests;
 			sourceTree = "<group>";
 		};
+		70EC3F6C9266C38126481273 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				110CE98510C11C2B5370BD4A /* Pods-AllFrameWorks-shareKit.debug.xcconfig */,
+				08F0A8345AB4341F497E301F /* Pods-AllFrameWorks-shareKit.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -111,6 +136,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CE7095125B173540094F440 /* Build configuration list for PBXNativeTarget "shareKit" */;
 			buildPhases = (
+				990E57232C05070A6680380D /* [CP] Check Pods Manifest.lock */,
 				5CE7093825B173540094F440 /* Headers */,
 				5CE7093925B173540094F440 /* Sources */,
 				5CE7093A25B173540094F440 /* Frameworks */,
@@ -194,6 +220,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		990E57232C05070A6680380D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AllFrameWorks-shareKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5CE7093925B173540094F440 /* Sources */ = {
@@ -343,6 +394,7 @@
 		};
 		5CE7095225B173540094F440 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 110CE98510C11C2B5370BD4A /* Pods-AllFrameWorks-shareKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -352,6 +404,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = shareKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,6 +419,7 @@
 		};
 		5CE7095325B173540094F440 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08F0A8345AB4341F497E301F /* Pods-AllFrameWorks-shareKit.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -375,6 +429,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = shareKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
